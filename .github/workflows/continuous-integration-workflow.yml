@@ -42,5 +42,4 @@ jobs:
        password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: login & push image to docker
-      run: docker login
       run: docker push veerapadala/cdrepo2
