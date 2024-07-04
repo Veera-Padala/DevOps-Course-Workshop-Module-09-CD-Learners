@@ -47,3 +47,8 @@ jobs:
 
     - name: login & push image to docker
       run: docker push veerapadala/cdrepo2
+
+    - name: Print webhook event
+      env:
+        AZURE_WEBHOOK: ${{ secrets.AZURE_WEBHOOK }}
+      run: curl -dH -X POST "$AZURE_WEBHOOK"
