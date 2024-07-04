@@ -40,7 +40,7 @@ jobs:
       with:
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
-      run: docker login
 
-    - name: push image to docker
+    - name: login & push image to docker
+      run: docker login
       run: docker push veerapadala/cdrepo2
