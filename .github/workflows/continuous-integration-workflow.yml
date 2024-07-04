@@ -32,8 +32,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    -name: build
-     run: docker build --tag veerapadala/cdrepo2 .
+    - name: build
+      run: docker build --tag veerapadala/cdrepo2 .
 
     - name: Login to Docker
       uses: docker/login-action@v1
